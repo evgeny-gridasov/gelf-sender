@@ -1,0 +1,26 @@
+GELF-Sender is a tiny C cross platform (Linux/Windows) log sender.
+==================================================================
+
+Parameters:
+
+ -h gelf_host      - hostname/ip of the remote GELF server
+ -p gelf_port      - port of the remote server
+ -f log_file       - path to the log file to send
+ -t sleep_timeout  - sleep timeout in milliseceonds between reading from file
+ -z my_hostname    - this server hostname
+ -a facility       - log facility, for example, daemon or application name
+ -v                - verbose logging
+
+
+
+Building:
+=========
+
+Requires zlib and json-c. Run ./configure then make.
+
+
+Cleanup:
+========
+
+make clean
+rm -rf config.log config.status Makefile src/.deps src/Makefile

@@ -1,0 +1,7 @@
+Makefile
+.deps
+*.o
+.settings
+.autotools
+.cproject
+.project
