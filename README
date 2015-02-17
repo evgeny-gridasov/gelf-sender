@@ -24,3 +24,18 @@ Cleanup:
 
 make clean
 rm -rf config.log config.status Makefile src/.deps src/Makefile
+
+
+Cross-Compiling for Windows:
+============================
+
+Both zlib and json-c can be cross compiled from source using mingw64.
+Install zlib and json-c binary libraries and includes to mingw64 system directories
+and cross compile gelf-sender is as follows:
+ 
+export ac_cv_func_realloc_0_nonnull=yes
+export ac_cv_func_malloc_0_nonnull=yes
+
+./configure --host=i686-w64-mingw32 --build=i686-linux
+make
+
